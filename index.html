@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>산본고등학교 급식 정보</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>🍽️ 산본고등학교 급식 정보</h1>
+      <p>원하는 날짜를 선택하여 급식 메뉴를 확인하세요</p>
+    </header>
+
+    <main>
+      <div class="date-selector">
+        <label for="meal-date">날짜 선택:</label>
+        <input type="date" id="meal-date" />
+        <button id="search-btn">급식 정보 조회</button>
+      </div>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>급식 정보를 불러오는 중...</p>
+      </div>
+
+      <div id="meal-info" class="meal-info hidden">
+        <h2 id="meal-date-display"></h2>
+        <div class="meal-cards">
+          <div class="meal-card" id="breakfast-card">
+            <h3>🌅 조식</h3>
+            <div class="meal-content" id="breakfast-content">
+              <p>조식 정보가 없습니다.</p>
+            </div>
+          </div>
+          <div class="meal-card" id="lunch-card">
+            <h3>🌞 중식</h3>
+            <div class="meal-content" id="lunch-content">
+              <p>중식 정보가 없습니다.</p>
+            </div>
+          </div>
+          <div class="meal-card" id="dinner-card">
+            <h3>🌙 석식</h3>
+            <div class="meal-content" id="dinner-content">
+              <p>석식 정보가 없습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="error-message" class="error-message hidden">
+        <p>급식 정보를 불러올 수 없습니다. 다른 날짜를 선택해보세요.</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>산본고등학교 급식 정보는 나이스 교육정보 개방포털에서 제공됩니다.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
